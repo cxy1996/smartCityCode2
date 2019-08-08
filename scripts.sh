@@ -10,4 +10,6 @@ sh ./scripts/colmap/reconstructOrg.sh
 
 sh ./scripts/colmap/reconstructFish+.sh
 
+sh ./scripts/colmap/reconstructOrg_halfPara
+
 python3 ./upload/mergeResult.py

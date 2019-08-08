@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-for i in 1,6
+for i in 1
 do
 DATASET_PATH=./dataset/fishEye/scene${i}
 WOKESAPCE_PATH=./workspace/fishEyeMask/scene${i}
@@ -47,4 +47,4 @@ colmap model_converter \
     --output_type TXT
 done
 
-python3 ./scripts/colmap/cloundAlign.py --methodType fishEyeMask --scene 1,6
+python3 ./scripts/colmap/cloundAlign.py --methodType fishEyeMask --scene 1
