@@ -4,7 +4,6 @@ for i in 1
 do
 DATASET_PATH=./dataset/fishEye/scene${i}
 WOKESAPCE_PATH=./workspace/fishEyeMask/scene${i}
-MASK_PATH=./dataset/mask.jpg
 SIFT_RATIO=0.8
 MIN_INLIERS=15
 NUM_THREADS=12
@@ -19,7 +18,6 @@ colmap feature_extractor \
     --image_path $DATASET_PATH \
     --ImageReader.single_camera 1 \
     --ImageReader.camera_model OPENCV_FISHEYE \
-    --ImageReader.camera_mask_path $MASK_PATH \
     --SiftExtraction.num_threads $NUM_THREADS \
     --SiftExtraction.gpu_index $GPU_INDEX
 
