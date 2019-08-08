@@ -3,7 +3,10 @@ import numpy as np
 
 topath1 = './upload/fishEyeMask/results1.txt'
 topath2 = './upload/fishEyeMask/results6.txt'
+scene1 = './dataset/officialData/scene1_jiading_lib_test'
+scene2 = './dataset/officialData/scene6_jiading_bolou_test'
 sort = True
+exampleDir = './upload/b.txt'
 use_example = False
 final_res = [topath1, topath2]
 
@@ -19,11 +22,11 @@ if sort:
         datas = [line.split(',') for line in f.read().splitlines()]
 
     if use_example:
-        with open('./upload/b.txt', 'r') as f:
+        with open(exampleDir, 'r') as f:
             ids = [line.split(',')[0] for line in f.read().splitlines()]
     else:
-        test1 = os.listdir('./dataset/officialData/scene1_jiading_lib_test')
-        test2 = os.listdir('./dataset/officialData/scene6_jiading_bolou_test')
+        test1 = os.listdir(scene1)
+        test2 = os.listdir(scene2)
         ids = []
         ids.extend(test1)
         ids.extend(test2)
